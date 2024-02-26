@@ -1,0 +1,36 @@
+22:17:22 **** Incremental Build of configuration Debug for project Ultrasonic_Distance_Calculator ****
+make all 
+Building file: ../distance_calculator.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"distance_calculator.d" -MT"distance_calculator.o" -c -o "distance_calculator.o" "../distance_calculator.c"
+In file included from ../distance_calculator.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../distance_calculator.c
+ 
+Building target: Ultrasonic_Distance_Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Ultrasonic_Distance_Calculator.map -mmcu=atmega32 -o "Ultrasonic_Distance_Calculator.elf"  ./Ultrasonic.o ./distance_calculator.o ./gpio.o ./icu.o ./my_lcd.o   
+Finished building target: Ultrasonic_Distance_Calculator.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Ultrasonic_Distance_Calculator.elf  >"Ultrasonic_Distance_Calculator.lss"
+Finished building: Ultrasonic_Distance_Calculator.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Ultrasonic_Distance_Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12982 bytes (39.6% Full)
+(.text + .data + .bootloader)
+
+Data:        285 bytes (13.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+22:17:22 Build Finished. 0 errors, 1 warnings. (took 503ms)
+
